@@ -1,0 +1,17 @@
+{
+  "locals": {
+    "title": "Zubr's place"
+  },
+  "autoprefix": ["> 5%"],
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "plugins": [
+    "wintersmith-autoprefixer-less",
+    "wintersmith-livereload"
+  ]
+}

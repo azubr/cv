@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "wintersmith-autoprefixer-less": "*",
+    "wintersmith-less": "*",
+    "wintersmith-livereload": "*"
+  },
+  "private": true
+}
