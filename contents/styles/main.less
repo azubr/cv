@@ -1,8 +1,22 @@
-@background: #222;
-@text: #333;
+@background: #222222;
+@content-bg:#ffffff;
+@text: #333333;
+@bg-width: 80vw;
+@bg-aspect: 1;
+@content-left: 30vw;
+@content-padding-left: ~"4vw + 10px";
+@content-padding: ~"2vw + 35px";
+@light-gray: #aaaaaa;
+@dark-gray: #777777;
+
+@simple: ~"only screen and (max-width: 990px), only print";
 
 html, body {
   height: 100%;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 body {
@@ -10,5 +24,130 @@ body {
   font-size: 14px;
   color: @text;
   margin: 0;
-  background: @background;
+  background-color: @background;
+  width: 100%;
+  position: relative;
+  @media only print {
+	background-color: white;		
+  }
 }
+
+.content {
+	top: 0;
+	position: absolute;
+	max-width: 1000px;
+	width: 68vw;
+	left: @content-left;
+	background-origin: padding-box;
+	background: url(../images/left-triangle.svg) no-repeat top left,
+	 			url(../images/right-triangle.svg) no-repeat bottom right,
+	 			@content-bg url(../images/fill-bg.svg) no-repeat fixed calc(@content-left ~"+" @content-padding-left) 0;
+	margin-top: calc(@content-padding);
+	padding-left: calc(@content-padding-left);
+	padding-right: calc(@content-padding);
+
+	background-clip: padding-box;
+	@media @simple { 
+		text-align: center;
+		left: 0;
+		right: 0;
+		width: auto;
+		margin: 2vw;
+		background: url(../images/left-triangle.svg) no-repeat top left,
+	 			url(../images/right-triangle.svg) no-repeat bottom right,
+	 			@content-bg;
+	 	
+	}
+
+	@media only print {
+		background: white;
+	}
+
+	&::after {
+	  	content: "\a0";
+	  	display: block;
+	  	position: relative;
+	  	top: 50vh;
+	  	@media @simple { 
+	  		top: 8em;
+	  	}
+	}
+}
+
+.background {
+	background: url(../images/face-big.jpg) no-repeat;
+	background-size: 100%;
+	position: fixed;
+	top: 0;
+	//resize image depending on screen height
+	//but always cover the screen vertically
+	width: @bg-width;
+	height: @bg-width * @bg-aspect;
+	min-height: 100vh;
+	min-width: 100vh / @bg-aspect;	
+	//And keep it aligned with content left side
+	margin-left:@content-left;
+	transform: translateX((-@content-left/@bg-width*100%));
+
+	@media @simple {
+		background: @background;
+		display: none;
+	}
+}
+
+
+.top-bars {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 8px;
+	z-index: 1;
+	display: flex;
+	.bar {
+		flex-grow: 1;
+	}
+	.bar0 { background-color: #000; }
+	.bar1 { background-color: @light-gray; }
+	.bar2 { background-color: @dark-gray; }
+}
+
+@import "about.less";
+@import "sections.less";
+
+.thank-you {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	p {
+		font-weight: 200;
+		font-size: 50px;
+		font-style: italic;
+		margin-top: 0;
+		color: @dark-gray;
+	}
+	@media only print {
+		display: none;
+	}
+}
+
+.citation {
+	background-color: @dark-gray;
+	color: @content-bg;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	padding-top: 2em;
+	padding-bottom: 4em;
+	.author {
+		font-weight: bold;
+		margin-top: 5px;
+	}
+	.text {
+		font-size: 22px;
+		font-weight: 200;
+	}
+	@media only print {
+		display: none;
+	}
+} 
+

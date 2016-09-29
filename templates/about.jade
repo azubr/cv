@@ -1,0 +1,18 @@
+div.buttons
+	a.button(href="mailto:a@zubr.me")
+		span.fa.fa-envelope-o
+		span.label.message Send me a message
+	a.button(href="http://ya.ru")
+		span.fa.fa-download
+		span.label.resume Download my resume
+svg.about-img
+	defs
+		mask#photoFrame
+			circle(cx="105" cy="105" r="94" fill="white")
+		mask#line
+			rect(y="-3" width="210" height="500" fill="white")
+			rect(x="102" width="6" height="500" fill="black")
+	rect.about-bg(y="105" width="210" height="500" mask="url(#line)")
+	circle.about-ring(cx="105" cy="105" r="102" stroke-width="6")
+	image(xlink:href="images/face.jpg" x="11" y="11" height="188" width="188" mask="url(#photoFrame)")
+div.about-text!= contents['about.md'].html

@@ -1,0 +1,51 @@
+-maskWidth=400
+-maskHeight=500
+-maskOffsetY=35
+-maskOffsetX=105
+mixin mask(rectHeight_, circleOffset_)
+	rect(y="-3" width=maskWidth height=maskHeight fill="white")
+	-rectHeight = (rectHeight_ > 0) ? rectHeight_ : (2 * maskHeight)
+	-circleOffset = (circleOffset_ > 0) ? circleOffset_ : maskOffsetY
+	g(transform='translate(' + maskOffsetX + ',' + circleOffset + ')')
+		rect(x="-3" y=-circleOffset-3 width="6" height=rectHeight  fill="black")
+		circle(r="28" fill="black")
+		circle(r="22" fill="white")
+		block
+
+svg(width='0', height='0')
+	defs
+		mask#header
+			rect(y="-3" width=maskWidth height=maskHeight fill="white")
+			g(transform='translate(' + maskOffsetX + ',' + maskOffsetY + ')')
+				rect(x="-3" y=-maskOffsetY-3 width="6" height=2*maskHeight  fill="black")
+				rect(y="-3" height="6" width="43" fill="black")
+				circle(cx="40" r="6" fill="black")
+
+		mask#bullet
+			+mask()
+				circle(r="10" fill="black")
+
+		mask#lastBullet
+			+mask(100 + maskOffsetY, 100 + maskOffsetY)
+				circle(r="10" fill="black")
+
+		mask#experience
+			+mask()
+				text(y="8" font-size="20" text-anchor="middle" font-family="FontAwesome") &#xf108;
+
+		mask#envelope
+			+mask()
+				text(y="6" font-size="20" text-anchor="middle" font-family="FontAwesome") &#xf003;
+
+		mask#portfolio
+			+mask()
+				text(y="8" font-size="20" text-anchor="middle" font-family="FontAwesome") &#xf0b1;
+
+		mask#skills
+			+mask()
+				text(y="6" font-size="20" text-anchor="middle" font-family="FontAwesome") &#xf080;
+
+
+
+
+				

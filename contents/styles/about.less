@@ -1,0 +1,97 @@
+.about {
+	@image-size: 210px;
+	@top-padding: 100px;
+	padding-top: @top-padding;
+	padding-left: @image-size + 20px;
+	min-height: @image-size + @top-padding;
+	@media @simple {
+		padding: 70px 20px 20px 0px;
+		min-height: auto;
+	} 
+	@media only print {
+		padding-top: 10px;
+	}
+
+	position: relative;
+	overflow: hidden;
+	.about-img {
+		width: @image-size;
+		height: 500px;
+		position: absolute;
+		left: 0;
+		@media @simple {
+			display: inline-block;
+			position: static;
+			height: @image-size;
+			line-height: @image-size;
+		}
+	}
+	.about-bg {
+		fill: @content-bg;
+	}
+	.about-ring {
+		fill: @content-bg;
+		stroke: @dark-gray;
+	}
+	.about-text {
+		text-align: left;
+	}
+
+	.buttons {
+		position: absolute;
+		top: 25px;
+		right: 0px;
+		@media only print {
+			display: none;
+		}
+	}
+
+	.button {
+		user-select: none;
+		cursor: pointer;
+		white-space: nowrap;
+		color: @content-bg;
+		background-color: @background;
+		border-radius: 4px;
+		padding: 6px 14px 8px 14px;
+		margin-left: 1em;
+		display: inline-block;
+		* {
+			vertical-align: middle;
+		}
+		.label {
+		    display: inline-block;
+		    width: 0;
+		    overflow: hidden;
+		    transition: all .3s ease-in-out;
+		    text-transform: uppercase;
+		    font-size: 10px;
+		}
+		&:hover .label.resume {
+			width: 13em;
+			padding-left: 1em;
+		}
+		&:hover .label.message {
+			width: 11em;
+			padding-left: 1em;
+		}
+	}	
+
+	h1 {
+		font-weight: normal;
+		font-size: calc(~"14px + 1.4vw");
+		border-bottom: thin solid @dark-gray;
+		padding-bottom: 4px;
+		margin-bottom: 0;
+		strong {
+			color: @dark-gray;
+		}
+	}
+
+	h2 {
+		font-weight: normal;
+		font-size: calc(~"10px + 1vw");
+		padding-top: 4px;
+		margin: 0;
+	}
+}

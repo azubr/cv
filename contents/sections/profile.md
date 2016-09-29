@@ -1,10 +1,13 @@
 ---
 title: Profile
-template: index.jade
 ---
 
 
-Prof
------------
+Mememe
+=======
+ahaha *oro* ee
+---------
 
-blahhhhhhh blah
+23 23 
+some prof
+some more
