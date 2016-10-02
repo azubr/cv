@@ -11,7 +11,7 @@
     "smartypants": true
   },
   "plugins": [
-    "wintersmith-less",
+    "wintersmith-autoprefixer-less",
     "wintersmith-livereload"
   ]
 }

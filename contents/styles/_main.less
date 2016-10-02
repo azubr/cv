@@ -1,13 +1,8 @@
-@background: #222222;
-@content-bg:#ffffff;
-@text: #333333;
 @bg-width: 80vw;
 @bg-aspect: 1;
 @content-left: 30vw;
 @content-padding-left: ~"4vw + 10px";
 @content-padding: ~"2vw + 35px";
-@light-gray: #aaaaaa;
-@dark-gray: #777777;
 
 @simple: ~"only screen and (max-width: 990px), only print";
 
@@ -32,6 +27,8 @@ body {
   }
 }
 
+@import "_menu.less";
+
 .content {
 	top: 0;
 	position: absolute;
@@ -39,9 +36,14 @@ body {
 	width: 68vw;
 	left: @content-left;
 	background-origin: padding-box;
+	@fill-bg: '	<svg width="400" height="100%" xmlns="http://www.w3.org/2000/svg">
+					<rect fill="@{dark-color}" x="70" width="90" height="50%"/>
+					<rect fill="@{bright-color}" x="70" width="90" height="50%" y="50%"/>
+				</svg>';
+	@fill-bg-esc: escape(@fill-bg);
 	background: url(../images/left-triangle.svg) no-repeat top left,
 	 			url(../images/right-triangle.svg) no-repeat bottom right,
-	 			@content-bg url(../images/fill-bg.svg) no-repeat fixed calc(@content-left ~"+" @content-padding-left) 0;
+	 			@content-bg url('data:image/svg+xml;charset=UTF-8,@{fill-bg-esc}') no-repeat fixed calc(@content-left ~"+" @content-padding-left) 0;
 	margin-top: calc(@content-padding);
 	padding-left: calc(@content-padding-left);
 	padding-right: calc(@content-padding);
@@ -106,13 +108,13 @@ body {
 	.bar {
 		flex-grow: 1;
 	}
-	.bar0 { background-color: #000; }
-	.bar1 { background-color: @light-gray; }
-	.bar2 { background-color: @dark-gray; }
+	.bar1 { background-color: #000; }
+	.bar0 { background-color: @bright-color; }
+	.bar2 { background-color: @dark-color; }
 }
 
-@import "about.less";
-@import "sections.less";
+@import "_about.less";
+@import "_sections.less";
 
 .thank-you {
 	padding-top: 100px;
@@ -122,7 +124,7 @@ body {
 		font-size: 50px;
 		font-style: italic;
 		margin-top: 0;
-		color: @dark-gray;
+		color: @dark-color;
 	}
 	@media only print {
 		display: none;
@@ -130,14 +132,13 @@ body {
 }
 
 .citation {
-	background-color: @dark-gray;
+	background-color: @dark-color;
 	color: @content-bg;
 	position: absolute;
 	left: 0;
 	width: 100%;
 	text-align: center;
-	padding-top: 2em;
-	padding-bottom: 4em;
+	padding: 2em 1em 4em 1em;
 	.author {
 		font-weight: bold;
 		margin-top: 5px;

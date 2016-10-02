@@ -1,13 +1,32 @@
----
+-------------
 title: Profile
----
+mask: bullet
+-------------
 
 
-Mememe
+Full name
+============================
+Alexey Sergeevich Zubritskiy
+----------------------------
+
+Born
+====
+10 Feb 1984 - Sverdlovsk, USSR
+--------------------------------
+
+
+Email
+=====
+<a@zubr.me>
+-----------
+
+Phone
+=====
++7 904 544 84 91
+----------------
+
+
+Website
 =======
-ahaha *oro* ee
----------
-
-23 23 
-some prof
-some more
+[zubr.me](http://zubr.me)
+--------------

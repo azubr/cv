@@ -1,0 +1,230 @@
+.section {
+	text-align: left;
+	position: relative;
+	overflow: hidden;
+	min-height: 70px;
+	padding-bottom: 30px;
+
+	svg {
+		width: 180px;
+		height: 1500px;
+		position: absolute;
+		top: 0;
+		display: block;
+		rect {
+			fill: @content-bg;
+		}
+		@media @simple {
+			display: none;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		&:link, &:visited, &:hover {
+			color: @dark-color;
+		}
+	}
+	 
+	>* {
+		margin-left: 180px;
+		@media @simple {
+			margin-left: 0px;
+		}
+	}
+
+	>svg {
+		margin-left: 0px;
+	}
+
+	>input {
+		display: none;
+	}
+
+	h2 {
+		font-size: 14px;
+		padding-left: 20px;
+		color: @dark-color;
+	}
+
+	h2+ul {
+		padding-left: 60px;
+	}
+
+	>input+label {
+		padding-top: 4px;
+		display: block;
+		text-decoration: underline;
+		cursor: pointer; 
+		&::after {
+			content: " ...";
+			@media only print {
+				content: "";
+			}
+		}
+	}
+
+	>input:checked+label {
+		&::after {
+			display: none;
+		}
+		+blockquote {
+			max-height: 1000px;
+			@media @simple {
+				max-height: 2000px;
+			}
+			@media only print {
+				display: none;
+			}
+		}
+	}
+
+	blockquote {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.5s ease;
+		padding-left: 20px;
+	}
+
+	h1 {
+		text-transform:uppercase;
+		margin-top: 5px;
+	}
+
+	[class^="bar-"] {
+		display: block;
+		cursor: default;
+		height: 30px;
+		line-height: 28px;
+		border: thin solid @dark-color;
+		border-radius: 4px;
+		overflow: hidden;
+		padding: 0 8px;
+		position: relative;
+		z-index: 1;
+		color:  @content-bg;
+		margin: 10px;
+		
+		@media only print {
+			color:  @text;
+		}
+
+		text-shadow:
+		   -1px -1px 0 @dark-color,  
+		    1px -1px 0 @dark-color,
+		    -1px 1px 0 @dark-color,
+		     1px 1px 0 @dark-color;
+
+
+
+		&::before {
+			content: "\a0";
+			display: block;
+			position: absolute;
+			z-index: -1;
+			height: 100%;
+			left: 0;
+			box-shadow: inset 0px 0px 0px 50px @dark-color;
+			@media only print {
+				box-shadow: inset 0px 0px 0px 50px @bright-color;
+			}
+		}
+		&::after {
+			float: right;
+			font-weight: bold;
+			color: @text;
+			text-shadow:
+			   -1px -1px 0 @content-bg,  
+			    1px -1px 0 @content-bg,
+			    -1px 1px 0 @content-bg,
+			     1px 1px 0 @content-bg;
+		}
+		.bar(@size) {
+			&.bar-@{size}::before {
+				right: (100% - @size);
+			}
+			&.bar-@{size}::after {
+				content: "@{size}%";
+			}
+		} 
+		.bar(40);
+		.bar(60);
+		.bar(70);
+		.bar(75);
+		.bar(80);
+		.bar(85);
+		.bar(90);
+		.bar(95);
+	}
+
+	&.header {
+		h1 {
+			font-size: 36px;
+			margin-top: 0.3em;
+		}
+	}
+
+	&.line {
+		h1 {
+			border-bottom: thin solid @dark-color;
+			padding-bottom: 4px;
+			margin-bottom: 0;
+			font-size: 20px;
+			strong {
+				color: @dark-color;
+			}
+			a {
+				text-decoration: none;
+				&:link, &:visited, &:hover {
+					color: @text;
+				}
+			}
+		}
+		h1+* {
+			margin-top: 0;
+			padding-top: 4px;
+			padding-left: 0px;
+			font-size: 14px;
+			em {
+				font-weight: normal;
+				font-variant: italic;
+				font-weight: 200;
+			}
+		}
+	}
+
+	&:last-child {
+		padding-bottom: 80px;
+	}
+
+	h2::before {
+		font-family:FontAwesome;
+		padding-right: 0.3em;
+		font-weight: 400;
+	}
+
+	//Section-specific
+	&.skills {
+		li {
+			display: inline-block;
+			border: thin solid @dark-color;
+			border-radius: 4px;
+			padding: 0 8px;
+			margin: 5px 2px;
+		}
+	}
+
+	&.education, &.interests {
+		h2 {
+			padding-left: 0;
+		}
+	}
+
+	&.education h2::before {
+		content: "\f0a3";
+	}
+
+	&.experience h2::before {
+		content: "\f024";
+	}
+}

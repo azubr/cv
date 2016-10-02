@@ -1,3 +1,13 @@
+---
+title: Alexey Zubritskiy
+template: cv.jade
+style: cyan
+sections:
+ - skills
+ - profile
+---
+
+
 Hi, I'm **Alexey Zubritskiy!**
 ==============================
 Web developer

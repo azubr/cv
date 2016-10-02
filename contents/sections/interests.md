@@ -1,0 +1,39 @@
+----------------
+title: Interests
+mask: interests
+----------------
+
+
+Functional and reactive programming
+===================================
+Haskel, Scala, Akka, React.js
+-----------------------------
+
+Composition of High order functions folds and ties data flow in unbelivable ways.
+It is just a new world where you learn programming from scratch.
+
+
+Low level software
+==================
+Rust
+----
+
+In contrast, Rust allows to perform safe and blazing fast calculations on almost bare hardware.
+I'd like to make a tiny ADs filtering proxy server than could work on routers and even 3g modems.
+
+
+Pet projects
+============
+
+## [Paytogether iOS app](https://projects.zubr.me/wiki/Paytogether)
+## [Adblock2privoxy filters converter written in Haskel](https://projects.zubr.me/wiki/adblock2privoxy)
+## [SublimeText plugin on Python](https://projects.zubr.me/wiki/Superlime)
+## [And other projects on projects.zubr.me](https://projects.zubr.me/)
+
+
+Publications
+============
+
+## [Hough Transform on GPU (in Russian)](https://habrahabr.ru/post/141438/)
+## [Fast Late-bound Calls with Generics in .NET](http://www.codeproject.com/Articles/33748/Fast-Late-bound-Calls-with-Generics-in-NET)
+## [Straight way to create ASP.NET user controls library](http://www.codeproject.com/Articles/30247/WebControls/)

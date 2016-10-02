@@ -1,0 +1,115 @@
+@opacity: 0.6;
+@menu-color: rgba(255,255,255,@opacity);
+
+#menu-state {
+	display: none;
+}
+
+label.menu-button {
+	font-size: calc(~"1vw + 30px");
+	@size: 2em;
+	position: fixed;
+	left: 0;
+	top: 8%;
+	width: @size;
+	height: @size;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	background-color: rgba(0,0,0,@opacity);
+	color: #fff;
+	&::before {
+		line-height: @size;
+		opacity: @opacity;
+	}
+	&:hover::before {
+		opacity: 1.0;
+		transition: opacity 0.5s ease;
+	}
+	opacity: 1.0;
+	transition: opacity 1s ease;
+	@media only print {
+		display: none;
+	}
+}
+
+.menu {
+	background-color: rgba(0,0,0,@opacity);
+	position: fixed;
+	height: 100%;
+	width: 28vw;
+	left: -28vw;
+	top: 0;
+	transition: left 1s ease;
+	z-index: 10;
+	padding: 70px 20px 0 20px;
+	@media @simple { 
+		width: 75vw;
+		left: -75vw;	
+	}
+	@media only print {
+		display: none;
+	}
+	a {
+		display: block;
+		width: 100%;
+		text-transform: uppercase;
+		vertical-align: middle;
+		&, &:link,&:hover,&:active,&:visited {
+			color: rgba(255,255,255,@opacity);
+			text-decoration: none;
+		}
+	}
+
+	.item {
+		border-bottom: 1px dotted rgba(255,255,255,@opacity);
+		line-height: 35px;
+		padding-left: 0px;
+		transition: padding-left 0.5s ease;
+		&:hover,&:active {
+			padding-left: 10px;
+		}
+		&::before {
+			content:"\f105";
+			font:normal normal normal 14px/1 FontAwesome;
+			padding-right: 6px;
+		}
+	}
+
+	.buttons {
+		padding-top: 20px;
+	}
+	.button {
+		padding: 6px 14px 8px 14px;
+		border: thin solid rgba(255,255,255,@opacity);
+		margin-top: 20px;
+		text-align: center;
+		max-width: 240px;
+		.label {
+			padding-left: 1em;
+		}
+	}
+}
+
+label.menu-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: calc(~"20px + 0.5vw");
+	color: #fff;
+	cursor: pointer;
+	opacity: @opacity;
+	transition: opacity 0.5s ease;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+#menu-state:checked+.menu-button {
+	opacity: 0;
+}
+
+#menu-state:checked+.menu-button+.menu {
+	left: 0vw;
+}
+

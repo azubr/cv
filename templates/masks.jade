@@ -1,5 +1,5 @@
 -maskWidth=400
--maskHeight=500
+-maskHeight=1500
 -maskOffsetY=35
 -maskOffsetX=105
 mixin mask(rectHeight_, circleOffset_)
@@ -29,21 +29,25 @@ svg(width='0', height='0')
 			+mask(100 + maskOffsetY, 100 + maskOffsetY)
 				circle(r="10" fill="black")
 
+		mask#profile
+			+mask()
+				text(y="6" font-size="20" text-anchor="middle" font-family="FontAwesome") &#xf00c;
+
 		mask#experience
 			+mask()
 				text(y="8" font-size="20" text-anchor="middle" font-family="FontAwesome") &#xf108;
 
-		mask#envelope
+		mask#education
 			+mask()
-				text(y="6" font-size="20" text-anchor="middle" font-family="FontAwesome") &#xf003;
+				text(y="6" font-size="20" text-anchor="middle" font-family="FontAwesome") &#xf19c;
 
-		mask#portfolio
+		mask#interests
 			+mask()
-				text(y="8" font-size="20" text-anchor="middle" font-family="FontAwesome") &#xf0b1;
+				text(y="8" font-size="20" text-anchor="middle" font-family="FontAwesome") &#xf135;
 
 		mask#skills
 			+mask()
-				text(y="6" font-size="20" text-anchor="middle" font-family="FontAwesome") &#xf080;
+				text(y="6" font-size="20" text-anchor="middle" font-family="FontAwesome") &#xf0ae;
 
 
 

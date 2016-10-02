@@ -1,15 +1,23 @@
 ---
-title: Wintersmith
-template: index.jade
+title: Alexey Zubritskiy - Software Engineer
+template: cv.jade
+style: gray
+sections:
+ - profile
+ - skills
+ - experience
+ - interests
+ - education
 ---
 
 
-Hello World
------------
+Hi, I'm **Alexey Zubritskiy!**
+==============================
+Software Engineer, Architect
+----------------------------
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+I'm a passionate programmer. I mean it. I love challenging tasks and hard problems. I started writing code even having no device to execute it and never stopped since that. I enjoy overcoming limitations of hardware and software. I have fun in learning a new technology inside and out, adopting its way of doing things, and making new exceptional products with it. 
+
+I've replaced heart of complex system while it was running full throttle. I've architected new systems from scratch. I dealed with various environments from calculators and phones to clouds and supercomputers. 
+
+Programming is not only my job and my hobby. It's my lifestyle.

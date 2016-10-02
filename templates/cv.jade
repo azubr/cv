@@ -1,0 +1,34 @@
+extends layout
+
+block content
+	include about
+	each sectionName in page.metadata.sections
+		- sectionContent = contents.sections[sectionName + '.md']
+		div.section-box
+			div.section.header
+				svg: rect(y="-3" width="100%" height="100%" mask="url(#header)")
+				h1(id=sectionContent.metadata.title.replace(/\s+/g, "-"))!= sectionContent.title			
+			each para in sectionContent.html.split(/(?=<h1)/)
+				- para = para.replace(/<h3 id="([^"]+)">/g, '<input type=checkbox id="$1"><label for="$1">')
+				- para = para.replace(/<\/h3>/g, '</label>')
+				- para = para.replace(/<a href="#/g, '<a class="')
+				div.section.line(class=sectionName)
+					svg: rect(y="-3" width="100%" height="100%" mask="url(#" + sectionContent.metadata.mask + ")")
+					!= para
+	div.section.thank-you
+		svg: rect(y="-3" width="100%" height="100%" mask="url(#lastBullet)")
+		p Thank you!
+	div.citation
+		div.text 
+			|“It's nonsense to look for a solution if it already exists. 
+			br
+			|We are talking about how to deal with a problem that has no solution.”
+		div.author Cristobal Junta
+
+
+block menu
+	each sectionName in page.metadata.sections
+		- sectionContent = contents.sections[sectionName + '.md']
+		a.item(href="#" + sectionContent.metadata.title.replace(/\s+/g, "-"))!= sectionContent.metadata.title
+	include buttons
+
