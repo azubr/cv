@@ -1,4 +1,4 @@
-@bg-width: 80vw;
+@bg-width: 50vw;
 @bg-aspect: 1;
 @content-left: 30vw;
 @content-padding-left: ~"4vw + 10px";
@@ -37,8 +37,8 @@ body {
 	left: @content-left;
 	background-origin: padding-box;
 	@fill-bg: '	<svg width="400" height="100%" xmlns="http://www.w3.org/2000/svg">
-					<rect fill="@{dark-color}" x="70" width="90" height="50%"/>
-					<rect fill="@{bright-color}" x="70" width="90" height="50%" y="50%"/>
+					<rect fill="@{theme-color}" x="70" width="90" height="50%"/>
+					<rect fill="@{bright-gray}" x="70" width="90" height="50%" y="50%"/>
 				</svg>';
 	@fill-bg-esc: escape(@fill-bg);
 	background: url(../images/left-triangle.svg) no-repeat top left,
@@ -88,8 +88,9 @@ body {
 	min-height: 100vh;
 	min-width: 100vh / @bg-aspect;	
 	//And keep it aligned with content left side
-	margin-left:@content-left;
-	transform: translateX((-@content-left/@bg-width*100%));
+	@bg-left: 30vw;
+	margin-left:@bg-left;
+	transform: translateX((-@bg-left/@bg-width*100%));
 
 	@media @simple {
 		background: @background;
@@ -108,9 +109,9 @@ body {
 	.bar {
 		flex-grow: 1;
 	}
-	.bar1 { background-color: #000; }
-	.bar0 { background-color: @bright-color; }
-	.bar2 { background-color: @dark-color; }
+	.bar2 { background-color: @dark-gray; }
+	.bar0 { background-color: @bright-gray; }
+	.bar1 { background-color: @theme-color; }
 }
 
 @import "_about.less";
@@ -124,7 +125,7 @@ body {
 		font-size: 50px;
 		font-style: italic;
 		margin-top: 0;
-		color: @dark-color;
+		color: @dark-gray;
 	}
 	@media only print {
 		display: none;
@@ -132,7 +133,7 @@ body {
 }
 
 .citation {
-	background-color: @dark-color;
+	background-color: @theme-color;
 	color: @content-bg;
 	position: absolute;
 	left: 0;

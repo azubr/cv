@@ -45,9 +45,14 @@ Side dishes
 * JSDoc
 * Markdown
 * Grunt
+* Mocha
+* Jasmine
 * Wintersmith
 * Dust.js
 * Cross-browser
+* Async
+
+
 
 
 Server side
@@ -62,16 +67,22 @@ Server side
 
 Including, but not limited to
 -----------------------------
-* Akka
 * Haskell
+* Akka
 * sbt
+* ScalaTest
 * Ant
 * Maven
+* JUnit
 * ASP.NET
 * C#
 * VB.NET 
 * REST
+* OOP
 * Concurrent computing
+* Dependency injection
+
+
 
 
 Mobile
@@ -86,6 +97,24 @@ Plus
 ----
 * Cross-platform development
 * AppStore publishing
+
+
+
+
+Cloud
+=====
+*4 years experience*
+
+[Amazon EC2](#bar-80)
+[Amazon S3](#bar-85)
+[OpenStack](#bar-60)
+
+As well as
+----------
+* Amazon RDS
+* Amazon RedShift
+* Amazon DynamoDB
+* Other AWS services
 
 
 Data
@@ -114,6 +143,8 @@ More keywords
 * Blazegraph
 * SPARQL
 * NoSQL
+
+
 
 
 Tools

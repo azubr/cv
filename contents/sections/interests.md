@@ -9,17 +9,17 @@ Functional and reactive programming
 Haskel, Scala, Akka, React.js
 -----------------------------
 
-Composition of High order functions folds and ties data flow in unbelivable ways.
+Composition of High order functions folds and ties data flow in unbelievable ways.
 It is just a new world where you learn programming from scratch.
 
 
-Low level software
+Low-level software
 ==================
 Rust
 ----
 
-In contrast, Rust allows to perform safe and blazing fast calculations on almost bare hardware.
-I'd like to make a tiny ADs filtering proxy server than could work on routers and even 3g modems.
+In contrast, Rust is the way to safe and blazing fast calculations on almost bare hardware.
+I'd like to make a tiny ADs filtering proxy server capable to work on routers and even 3g modems.
 
 
 Pet projects
@@ -31,9 +31,14 @@ Pet projects
 ## [And other projects on projects.zubr.me](https://projects.zubr.me/)
 
 
-Publications
-============
+Articles
+========
 
 ## [Hough Transform on GPU (in Russian)](https://habrahabr.ru/post/141438/)
 ## [Fast Late-bound Calls with Generics in .NET](http://www.codeproject.com/Articles/33748/Fast-Late-bound-Calls-with-Generics-in-NET)
 ## [Straight way to create ASP.NET user controls library](http://www.codeproject.com/Articles/30247/WebControls/)
+
+And travels
+===========
+[travel.zubr.me](http://travel.zubr.me/)
+----------------------------------------

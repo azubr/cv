@@ -21,8 +21,8 @@
 
 	a {
 		text-decoration: none;
-		&:link, &:visited, &:hover {
-			color: @dark-color;
+		&, &:link, &:visited, &:hover {
+			color: @dark-gray;
 		}
 	}
 	 
@@ -44,7 +44,7 @@
 	h2 {
 		font-size: 14px;
 		padding-left: 20px;
-		color: @dark-color;
+		color: @dark-gray;
 	}
 
 	h2+ul {
@@ -96,24 +96,27 @@
 		cursor: default;
 		height: 30px;
 		line-height: 28px;
-		border: thin solid @dark-color;
+		border: thin solid @dark-gray;
 		border-radius: 4px;
 		overflow: hidden;
 		padding: 0 8px;
 		position: relative;
 		z-index: 1;
-		color:  @content-bg;
 		margin: 10px;
+
+		&, &:link, &:visited, &:hover {
+			color:  @content-bg;
+		}
 		
 		@media only print {
 			color:  @text;
 		}
 
 		text-shadow:
-		   -1px -1px 0 @dark-color,  
-		    1px -1px 0 @dark-color,
-		    -1px 1px 0 @dark-color,
-		     1px 1px 0 @dark-color;
+		   -1px -1px 0 @dark-gray,  
+		    1px -1px 0 @dark-gray,
+		    -1px 1px 0 @dark-gray,
+		     1px 1px 0 @dark-gray;
 
 
 
@@ -124,9 +127,9 @@
 			z-index: -1;
 			height: 100%;
 			left: 0;
-			box-shadow: inset 0px 0px 0px 50px @dark-color;
+			box-shadow: inset 0px 0px 0px 50px @dark-gray;
 			@media only print {
-				box-shadow: inset 0px 0px 0px 50px @bright-color;
+				box-shadow: inset 0px 0px 0px 50px @bright-gray;
 			}
 		}
 		&::after {
@@ -166,12 +169,12 @@
 
 	&.line {
 		h1 {
-			border-bottom: thin solid @dark-color;
+			border-bottom: thin solid @dark-gray;
 			padding-bottom: 4px;
 			margin-bottom: 0;
 			font-size: 20px;
 			strong {
-				color: @dark-color;
+				color: @dark-gray;
 			}
 			a {
 				text-decoration: none;
@@ -207,7 +210,7 @@
 	&.skills {
 		li {
 			display: inline-block;
-			border: thin solid @dark-color;
+			border: thin solid @dark-gray;
 			border-radius: 4px;
 			padding: 0 8px;
 			margin: 5px 2px;

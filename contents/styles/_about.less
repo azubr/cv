@@ -25,16 +25,20 @@
 			height: @image-size;
 			line-height: @image-size;
 		}
+		@media only print {
+			display: none;
+		}
 	}
 	.about-bg {
 		fill: @content-bg;
 	}
 	.about-ring {
 		fill: @content-bg;
-		stroke: @dark-color;
+		stroke: @theme-color;
 	}
 	.about-text {
 		text-align: left;
+
 	}
 
 	.buttons {
@@ -51,7 +55,7 @@
 		cursor: pointer;
 		white-space: nowrap;
 		color: @content-bg;
-		background-color: @background;
+		background-color: @dark-gray;
 		border-radius: 4px;
 		padding: 6px 14px 8px 14px;
 		margin-left: 1em;
@@ -80,12 +84,23 @@
 	h1 {
 		font-weight: normal;
 		font-size: calc(~"14px + 1.4vw");
-		border-bottom: thin solid @dark-color;
+		border-bottom: thin solid @theme-color;
 		padding-bottom: 4px;
 		margin-bottom: 0;
-		strong {
-			color: @dark-color;
+		@media only print {
+			font-size: 0;
 		}
+		strong {
+			color: @theme-color;
+			em {
+				font-style: normal;
+				@media only print {
+					font-size:18px;
+				}
+			}
+		}
+
+		
 	}
 
 	h2 {

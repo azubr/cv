@@ -1,7 +1,7 @@
 ---
 title: Alexey Zubritskiy - Software Engineer
 template: cv.jade
-style: cyan
+style: orange
 sections:
  - profile
  - skills

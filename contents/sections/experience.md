@@ -6,7 +6,7 @@ mask: experience
 
 [Firmshift](http://firmshift.com/)
 ==================================
-Machine learning engineer, Architect - *February 2016 - Present*
+Machine learning engineer, Architect - *November 2015 - Present*
 ------------------------------------
 
 ### Reason.ai ###
@@ -54,7 +54,7 @@ Frontend developer, Architect
 * Creating architecture and step-by-step plan of migration from JSP-based frontend to Single-page application
 * Developing Single-page application frontend, performing migration (AngularJS, BackboneJS, HTML, CSS, JS, Grunt, Ant)
 * Developing frontend for new modules 
-* Intergation frontend build toolchain into exising project build system (Node.JS, Grunt, Ant, Jenkins)
+* Integration frontend build toolchain into existing project build system (Node.JS, Grunt, Ant, Jenkins)
 * Introducing and supporting newly joined developers
 * Introducing and enforcing code style and documentation standards (JSHint, JSDoc)
 
@@ -81,7 +81,7 @@ Full stack developer
 
 [Paytogether](http://projects.zubr.me/wiki/Paytogether) (own project)
 =====================================================================
-Mobile Developer - *January 2013 - August 2013*
+Mobile Application Developer - *January 2013 - August 2013*
 -----------------------------------------------
 
 ### Paytogether mobile app ###
@@ -142,7 +142,7 @@ Full stack developer
 --------------------
 * Developing HRM web application (VB.NET, ASP.NET Web Pages, jQuery, AJAX, JavaScript)
 * Developing database (MS SQL, T-SQL SQL reports)
-* Doing researches, technical and architecture designs, proof-of-concept 
+* Doing researches, technical and architecture design, proof-of-concept 
 * Interviewing, introducing and supporting new team members
 
 Mobile developer
