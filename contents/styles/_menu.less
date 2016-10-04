@@ -7,27 +7,30 @@
 
 label.menu-button {
 	font-size: calc(~"1vw + 30px");
-	@size: 2em;
+	@size: 1.6em;
 	position: fixed;
 	left: 0;
-	top: 8%;
+	top: 4vh;
 	width: @size;
 	height: @size;
 	cursor: pointer;
 	text-align: center;
 	vertical-align: middle;
-	background-color: rgba(0,0,0,@opacity);
+	background-color: rgba(0,0,0,0.3);
 	color: #fff;
+	opacity: @opacity;
 	&::before {
 		line-height: @size;
 		opacity: @opacity;
-	}
-	&:hover::before {
-		opacity: 1.0;
 		transition: opacity 0.5s ease;
 	}
-	opacity: 1.0;
-	transition: opacity 1s ease;
+	&:hover {
+		&::before {
+			opacity: 1.0;
+		}
+		opacity: 1.0;
+	}
+	transition: opacity 0.5s ease;
 	@media only print {
 		display: none;
 	}
