@@ -4,7 +4,7 @@ block content
 	include about
 	each sectionName in page.metadata.sections
 		- sectionContent = contents.sections[sectionName + '.md']
-		div.section-box
+		div.section-box(class=sectionName)
 			div.section.header
 				svg: rect(y="-3" width="100%" height="100%" mask="url(#header)")
 				h1(id=sectionContent.metadata.title.replace(/\s+/g, "-"))!= sectionContent.title			
@@ -12,7 +12,7 @@ block content
 				- para = para.replace(/<h3 id="([^"]+)">/g, '<input type=checkbox id="$1"><label for="$1">')
 				- para = para.replace(/<\/h3>/g, '</label>')
 				- para = para.replace(/<a href="#/g, '<a class="')
-				div.section.line(class=sectionName)
+				div.section.line
 					svg: rect(y="-3" width="100%" height="100%" mask="url(#" + sectionContent.metadata.mask + ")")
 					!= para
 	div.section.thank-you
@@ -31,4 +31,5 @@ block menu
 		- sectionContent = contents.sections[sectionName + '.md']
 		a.item(href="#" + sectionContent.metadata.title.replace(/\s+/g, "-"))!= sectionContent.metadata.title
 	include buttons
+
 

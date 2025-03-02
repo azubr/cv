@@ -2,9 +2,23 @@
 	text-align: left;
 	position: relative;
 	overflow: hidden;
-	min-height: 70px;
+	min-height: 50px;
 	padding-bottom: 30px;
+	&:last-child {
+		padding-bottom: 80px;
+	}
 
+	@media @print {
+		min-height: auto;
+		padding-bottom: 1em;
+		&.line {
+			padding-bottom: 0.5em;
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	
 	svg {
 		width: 180px;
 		height: 1500px;
@@ -26,7 +40,7 @@
 		}
 	}
 	 
-	>* {
+	> * {
 		margin-left: 180px;
 		@media @simple {
 			margin-left: 0px;
@@ -43,22 +57,49 @@
 
 	h2 {
 		font-size: 14px;
-		padding-left: 20px;
 		color: @dark-gray;
+		margin-bottom: 0.3em;
+		margin-top: 0.5em;
+		padding-left: 2em;
+		break-after: avoid;
+		@media @print {
+			padding-left: 1em;
+		}
+		& + p {
+			margin-top: 0;
+			margin-bottom: 0;
+			// padding-left: 2em;
+			// @media @print {
+			// 	padding-left: 1em;
+			// }
+		} 
 	}
 
-	h2+ul {
-		padding-left: 60px;
+	ul {
+		padding-left: 5em;
+		@media @mobile {
+			padding-left: 3em;
+		}
+
+		@media @print {
+			padding-left: 1em;
+			margin: 0;
+		}
 	}
 
 	>input+label {
 		padding-top: 4px;
 		display: block;
 		text-decoration: underline;
+		break-after: avoid;
+		@media @print {
+			text-decoration: none;
+			font-weight: bold;
+		}
 		cursor: pointer; 
 		&::after {
 			content: " ...";
-			@media only print {
+			@media @print {
 				content: "";
 			}
 		}
@@ -73,9 +114,6 @@
 			@media @simple {
 				max-height: 2000px;
 			}
-			@media only print {
-				display: none;
-			}
 		}
 	}
 
@@ -83,12 +121,25 @@
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.5s ease;
-		padding-left: 20px;
+		padding-left: 1.5em;
+		margin-top: 0;
+		margin-bottom: 0;
+
+		@media @print{
+			display: none;
+		}
 	}
 
 	h1 {
 		text-transform:uppercase;
 		margin-top: 5px;
+		break-after: avoid;
+		@media @print{
+			margin-top: 1.5em;
+			& ~ * {
+				padding-left: 1.5em;
+			}
+		}
 	}
 
 	[class^="bar-"] {
@@ -102,22 +153,24 @@
 		padding: 0 8px;
 		position: relative;
 		z-index: 1;
-		margin: 10px;
+		margin: 10px 2em;
 
 		&, &:link, &:visited, &:hover {
 			color:  @content-bg;
 		}
-		
-		@media only print {
-			color:  @text;
-		}
 
 		text-shadow:
-		   -1px -1px 0 @dark-gray,  
-		    1px -1px 0 @dark-gray,
-		    -1px 1px 0 @dark-gray,
-		     1px 1px 0 @dark-gray;
+			0 0 4px @dark-gray,
+			0 0 4px @dark-gray,
+			0 0 4px @dark-gray;
 
+
+		@media @print {
+			margin: 10px 0;
+			color:  @text;
+			font-weight: bold;
+			text-shadow: none;
+		}
 
 
 		&::before {
@@ -127,9 +180,10 @@
 			z-index: -1;
 			height: 100%;
 			left: 0;
-			box-shadow: inset 0px 0px 0px 50px @dark-gray;
-			@media only print {
-				box-shadow: inset 0px 0px 0px 50px @bright-gray;
+			box-shadow: inset 0px 0px 3px 50px @dark-gray;
+			//border-radius: 4px 0 0 4px;
+			@media @print {
+				box-shadow: inset 0px 0px 3px 50px @bright-gray;
 			}
 		}
 		&::after {
@@ -137,10 +191,13 @@
 			font-weight: bold;
 			color: @text;
 			text-shadow:
-			   -1px -1px 0 @content-bg,  
-			    1px -1px 0 @content-bg,
-			    -1px 1px 0 @content-bg,
-			     1px 1px 0 @content-bg;
+				0 0 4px @content-bg,
+				0 0 4px @content-bg,
+				0 0 4px @content-bg;
+
+			@media @print {
+				text-shadow: none;
+			}
 		}
 		.bar(@size) {
 			&.bar-@{size}::before {
@@ -151,7 +208,9 @@
 			}
 		} 
 		.bar(40);
+		.bar(50);
 		.bar(60);
+		.bar(65);
 		.bar(70);
 		.bar(75);
 		.bar(80);
@@ -161,9 +220,21 @@
 	}
 
 	&.header {
+		@media @print {
+			padding-bottom: 0;
+		}
 		h1 {
 			font-size: 36px;
 			margin-top: 0.3em;
+			margin-bottom: 0;
+			@media @print {
+				font-size: 24px;
+				border-bottom: thin solid @dark-gray;
+				padding-bottom: 4px;
+				& + *{
+					padding-top: 4px;
+				}
+			}
 		}
 	}
 
@@ -173,6 +244,11 @@
 			padding-bottom: 4px;
 			margin-bottom: 0;
 			font-size: 20px;
+			@media @print {
+				border-bottom: none;
+				padding-bottom: 0;
+				font-size: 14px;
+			}
 			strong {
 				color: @dark-gray;
 			}
@@ -182,22 +258,22 @@
 					color: @text;
 				}
 			}
-		}
-		h1+* {
-			margin-top: 0;
-			padding-top: 4px;
-			padding-left: 0px;
-			font-size: 14px;
-			em {
-				font-weight: normal;
-				font-variant: italic;
-				font-weight: 200;
+			& + p {
+				margin-top: 0;
+				padding-top: 4px;
+				break-after: avoid;
+				@media @print {
+					padding-top: 0;
+					margin-bottom: 0.5em;
+				}
+				padding-left: 0px;
+				em {
+					font-weight: normal;
+					font-variant: italic;
+					font-weight: 200;
+				}
 			}
 		}
-	}
-
-	&:last-child {
-		padding-bottom: 80px;
 	}
 
 	h2::before {
@@ -205,29 +281,124 @@
 		padding-right: 0.3em;
 		font-weight: 400;
 	}
+}
 
-	//Section-specific
-	&.skills {
-		li {
-			display: inline-block;
-			border: thin solid @dark-gray;
-			border-radius: 4px;
-			padding: 0 8px;
-			margin: 5px 2px;
-		}
+//Section-specific
+.section-box {
+	@media @print {
+		background-color: white;
+		position: relative;
+		z-index: 2;
 	}
+	&.profile {
+		@media @print {
+			margin-top: 4em;
+			grid-column: 2;
+			grid-row: 1;
 
-	&.education, &.interests {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: flex-start;
+
+			.header {
+				display: none;
+			}
+
+			.line {
+				padding-bottom: 0em;
+				@media @print {
+					margin: 0;
+					min-width: 40%;
+				}
+				h1 {
+					font-size: 14px;
+					@media @print{
+						margin-top: 0.3em;
+					}
+				}
+			}
+
+			.line:nth-last-child(-n+2) {
+				display: none;
+			}
+		}
 		h2 {
-			padding-left: 0;
+			padding-left:0;
+			margin-top: 0;
+			@media @print {
+				font-weight: normal;
+				font-size: 0.95em;
+			}
 		}
 	}
 
-	&.education h2::before {
-		content: "\f0a3";
+	&.experience {
+		@media @print {
+			grid-column: 1;
+			grid-row: 3;
+		}
+		.line {
+			h2::before {
+				content: "\f024";
+			}
+			@media @print {
+				label {
+					padding-left: 1.5em;
+				}
+				h2 {
+					padding-left: 3em;
+				}
+				ul {
+					padding-left: 4em;
+				}
+			}
+		}
 	}
-
-	&.experience h2::before {
-		content: "\f024";
+	
+	&.skills {
+		@media @print {
+			grid-column: 2;
+			grid-row: 2 / span 3;
+		}
+		.line{
+			li {
+				display: inline-block;
+				border: thin solid @dark-gray;
+				border-radius: 4px;
+				padding: 0 8px;
+				margin: 5px 2px;
+				@media @print {
+					margin: 2px;
+				}
+			}
+			h1 strong {
+				filter: grayscale(100%);
+			}
+		}
+	}
+	
+	&.interests {
+		@media @print {
+			grid-column: 1;
+			grid-row: 4 / span 4;
+			h1 {
+				margin-top: 1em;
+			}
+		}
+	}
+	
+	
+	&.education {
+		@media @print {
+			grid-column: 2;
+			grid-row: 5;
+			h1 {
+				margin-top: 1em;
+			}
+		}
+		.line h2::before {
+			content: "\f0a3";
+		}
 	}
 }

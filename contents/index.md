@@ -1,23 +1,24 @@
 ---
-title: Alexey Zubritskiy - Software Engineer
-template: cv.jade
+title: Alexey Zubritskiy - Software Engineer, Architect, Blockchain Specialist
+template: cv.pug
 style: cyan
 sections:
  - profile
- - skills
  - experience
+ - skills
  - interests
  - education
 ---
 
+*Looking for remote job*
 
-Hi, I'm ** *Alexey Zubritskiy*!**
+Hi, I'm **Alexey Zubritskiy**
 ==============================
-Software Engineer, Architect
-----------------------------
+Senior Software Engineer, Architect, Blockchain Specialist
+----------------------------------------------------------
 
-I'm a passionate programmer. I mean it. I love challenging tasks and difficult problems. I started writing code even when I had no device to execute it and never stopped since then. I enjoy overcoming hardware and software limitations. I have fun in learning a new technology inside and out, adopting its way of doing things, and making exceptional new products with it. 
+I am a passionate programmer—and I mean it. I love challenging tasks and difficult problems. I started writing code before I even had a device to run it on, and I have never stopped since. I enjoy overcoming hardware and software limitations. I love learning new technologies inside and out, embracing their methodologies, and creating exceptional products with them.
 
-I've replaced the heart of a complex system while it was running full throttle. I've designed new systems from scratch. I've dealt with various environments—from calculators and phones to clouds and supercomputers. 
+I have replaced the core of a complex system while it was running at full capacity. I have designed new systems from scratch. I have worked across diverse environments—from calculators and mobile devices to cloud platforms and supercomputers.
 
-Programming is not only my job and my hobby. It is my lifestyle.
+For me, programming is more than a job or a hobby—it is a way of life.

@@ -3,28 +3,125 @@ title: Work Experience
 mask: experience
 ---
 
+Trading bot (own project)
+=====================================================================
+*September 2024 - Present*
+
+### Trading bot ###
+>	Tracks state of spefific tokens and protocols
+>   Executes trading strategies based on blockchain conditions
+
+
+Senior Backend developer, Architect, Blockchain Specialist
+----------------------------------------------------------
+- Development of bot runner (Go, MySQL)
+- Development of trading strategies (TypeScript, Solidity)
+- Indexing blockchain events and state (AssemblyScript)
+- Maintenance of blockchain node and indexer instance (Erigon, TheGraph)
+
+
+[VALK](https://datai.network/)
+==============================
+*December 2021 - July 2024*
+
+### Merlin ###
+>   Merlin serves both accounting service providers as well as accounting software platform solutions, managing clients with digital asset portfolios. Its wallet analytical data solution covers:
+>   1. Wallet Activity Profiling: Offering a comprehensive 360-degree overview of historical on-chain activity across wallets to assess client portfolios quickly and accurately.
+>   2. Blockchain Transactions History Tracking: Detailing all on-chain movements with context information to aid in accurate reconciliation for bookkeeping and tax purposes.
+>   3. DeFi Historical Profitability Reporting: Providing real-time and historical data on holdings, gains, and losses necessary for treasury management, accrual accounting, financial statements, and audits.
+
+Senior Backend developer, Architect, Blockchain Specialist
+----------------------------------------------------------
+- Updating architecture of blockchain indexer involving TheGraph
+- Indexing of MakerDAO, Uniswap, Curve and others (Kotlin, AssemblyScript)
+
+### Smart wallet ###
+>   Smart contract holding user's funds and allowing to execute arbitrary inversment strategies on behalf of the user.
+>   The wallet is integrated with transaction builder allowing to combine existing strategies and create new ones.
+
+Senior Software Engineer, Architect, Blockchain Specialist
+----------------------------------------------------------
+
+- Architecture and development of smart contracts (Solidity)
+- Integration of MakerDAO main frontend functionality (JS, React)
+
+### Datai network ###
+>   Decentralized network of blockchain indexers providing aggregation and deep insights of various DeFi protocols.
+
+Senior Software Engineer, Architect, Blockchain Specialist
+----------------------------------------------------------
+- Creating design and tokenomics of the indexers network (L2 network, proof of indexing, Zero-knowledge proofs)
+- Architecture and development of network node and sandbox environment (Go, AssemblyScript)
+
+
+
+
+
+[RocketDNA](https://slack.com/marketplace/APF6DHZB6-rocketdna)
+==============================================================
+*November 2015 - November 2021*
+
+### RocketDNA web app ###
+>   RocketDNA allows you to create a fast-growing business by building on the experience of successful startups, setting ambitious, yet simple and measurable goals while operating at a level of diligence investors will love.
+>   Team up with RocketDNA and streamline your growth progress to become a highly professional and goal-driven company
+
+
+Senior Software Engineer, Architect (3 years)
+---------------------------------------------
+- Full development of frontend (React)
+- Full development of backend (Java)
+- Full development of database (MySQL)
+- Maintenance (docker, AWS)
+
 
 [Firmshift](http://firmshift.com/)
 ==================================
-Machine learning engineer, Architect - *November 2015 - Present*
-------------------------------------
+*November 2015 - November 2021*
+
+### Liquifi AMM ###
+>	Liquify is a decentralized platform revolutionizing token vesting by enabling liquidity through liquid tokens. 
+>   Users can trade vested tokens instantly, enhancing flexibility, capital efficiency, and market participation. 
+>   With features like automated token management, instant liquidity, and dynamic tokenomics, Liquify empowers projects and investors to unlock value, reduce risks, and engage actively in the DeFi ecosystem. 
+
+
+Senior Software Engineer, Architect, Blockchain Specialist (1 year)
+---------------------------------------------------------------------
+* Architecture and full development of blockchain part of Liquifi V1 (Solidity)
+* Participation in protocol design and math
+* Development of Liquifi V2 on Cardano blockchain (Haskell)
+* Backend development of Liquifi V2 for Cardano (Haskell)
+
+
+### Clipeum KYC ###
+>   Know your customer platform based on Corda blockchain
+
+Senior Frontend developer (6 months)
+----------------------------------------------
+* Frontend development (JS, React)
+
+
+
+### BCG POC Factory ###
+>	RAD tool for quick prototyping on Hyperledger and Vue.js
+
+
+Senior Frontend developer, Architect (6 months)
+-----------------------------------------------
+* Full development of RAD IDE for fast prototyping frontend of Blockchain Proof of Concept (Vue.js)
+* Integration with Hyperledger and IoT sensors
+
 
 ### Reason.ai ###
 >	Machine Learning powered initiative aimed at advancing current state of the art in deriving meaningful insights from unstructured data: 
 >	Natural Language Processing, Abstract Meaning Representation, Machine Reasoning, and Semantic Unification.
 
-
+Machine learning engineer, Architect (3.5 years)
+------------------------------------------------
 * Developing architectures, software solutions, and Machine Learning models for various domains, including Biotech and Public Services.
 * Developing apps for supercomputers and clusters based on Massively Parallel Processing model (Python, TensorFlow)
 * Developing and integrating natural language processing algorithms (Scala, Akka, Protobuf, Python)
 * Researching approaches for meaning extraction and merging (AMR, Blazegraph)
 * Working on Data Visualisation solutions (HTML5, JavaScript)
-
-
-
-
-
-
 
 
 
@@ -49,8 +146,8 @@ Machine learning engineer, Architect - *November 2015 - Present*
 >	evidence to support critical life sciences functions, delivering relevant, up-to-date biomedical information to 
 >	the global biomedical research community.
   
-Frontend developer, Architect
------------------------------
+Senior Frontend developer, Architect (2.5 years)
+------------------------------------------------
 * Creating architecture and step-by-step plan of migration from JSP-based frontend to Single-page application
 * Developing Single-page application frontend, performing migration (AngularJS, BackboneJS, HTML, CSS, JS, Grunt, Ant)
 * Developing frontend for new modules 
@@ -65,27 +162,19 @@ Frontend developer, Architect
 >	full-text scientific, technical and health publications with smart, intuitive functionality 
 >	so that you can stay informed in your field, and can work more effectively and efficiently.
 
-
-Full stack developer
--------------------
+Full stack developer (5 months)
+-------------------------------
 * Developing documents downloader applet (AngularJS, HTML5, CSS)	  
 * Developing documents downloader service (Java, REST, Amazon Redshift, Amazon S3)
 
 
 
 
-
-
-
-
-
 [Paytogether](http://projects.zubr.me/wiki/Paytogether) (own project)
 =====================================================================
-Mobile Application Developer - *January 2013 - August 2013*
------------------------------------------------
+*January 2013 - August 2013*
 
 ### Paytogether mobile app ###
-
 >	Track shared expenses
 >	
 >	Do you travel in group? Do you make a party? Do you have some other situations when someone is paying for everyone? And do you know 
@@ -99,14 +188,12 @@ Mobile Application Developer - *January 2013 - August 2013*
 >	
 >	Additionally you can control everyone's and group expenses at any period to spend money wisely. 
   
+Mobile Application Developer
+----------------------------
 * Developing iOS application (Objective-C, SQLite)
 * Developing Android application (Java, SQLite)
 * Developing ORM library for android platform (Java, SQL)
 * Publishing to AppStore
-
-
-
-
 
 
 
@@ -156,15 +243,16 @@ Documentation manager
 
 
 
-
-
-
-
 SoftDev Ltd
 ===========
-Full stack developer - *February 2005 – November 2007*
-------------------------------------------------------
+*February 2005 – November 2007*
 
-* Developing on-line Enterprise Project and Portfolio Management System (ASP.NET, C#, SQL Server)
+### Streamline ###
+>   CRM and portfolio management system
+
+Full stack developer
+--------------------
+
+* Developing on-line Enterprise Project and Portfolio Management System (ASP.NET, C#, JS, SQL Server)
 
 

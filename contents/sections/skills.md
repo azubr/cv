@@ -4,68 +4,45 @@ mask: skills
 -------------
 
 
-Machine learning & NLP
+Blockchain & DeFi **🔥**
 ======================
-*1 year experience,* current priority
--------------------------------------
+*5 years experience,* **current priority**
 
-[Tensorflow](#bar-70)
-[ML theory](#bar-60)
-[Stanford NLP tools](#bar-60)
+[Solidity](#bar-95)
+[TheGraph](#bar-90)
+[DeFi protocols](#bar-85)
+[Nodes maintenance](#bar-70)
 
 And also
 ----------
-* AMR
-* RDF
-* word2vec
-* MATHLAB
-
-
-
-Frontend
-========
-*10+ years experience*
-
-[JavaScript](#bar-95)
-[HTML](#bar-90)
-[CSS](#bar-90)
-[AngularJS 1.X](#bar-85)
-[BackboneJS](#bar-75)
-
-Side dishes
------------
-* JSON
-* AJAX
-* HTTP 
-* JQuery
-* Underscore.js
-* LESS
-* SASS
-* Jade
-* JSDoc
-* Markdown
-* Grunt
-* Mocha
-* Jasmine
-* Wintersmith
-* Dust.js
-* Cross-browser
-* Async
-
-
+* Ethereum
+* Cardano
+* L2 chains
+* EVM
+* AssemblyScript
+* Firehose
+* Hardhat
+* Uniswap
+* MakerDAO
+* Geth
+* Erigon
+* Trueblocks
 
 
 Server side
 ===========
-*9 years experience*
+*10+ years experience*
 
-[Scala](#bar-85)
+[Kotlin](#bar-80)
 [Java](#bar-80)
-[.NET](#bar-75)
+[GoLang](#bar-75)
+[Scala](#bar-75)
+[.NET](#bar-65)
+[Node.JS](#bar-70)
 [Python](#bar-60)
-[Node.JS](#bar-40)
 
-Including, but not limited to
+
+Including
 -----------------------------
 * Haskell
 * Akka
@@ -84,37 +61,39 @@ Including, but not limited to
 
 
 
+Frontend
+========
+*10+ years experience*
 
-Mobile
-======
-*2 years experience*
+[JavaScript](#bar-95)
+[HTML](#bar-90)
+[CSS](#bar-90)
+[VueJS](#bar-75)
+[React](#bar-70)
+[AngularJS](#bar-60)
 
-[Objective-C & iOS](#bar-70)
-[Java & Android](#bar-80)
-[Titanium Appcelerator](#bar-70)
-
-Plus
-----
-* Cross-platform development
-* AppStore publishing
-
-
-
-
-Cloud
-=====
-*4 years experience*
-
-[Amazon EC2](#bar-80)
-[Amazon S3](#bar-85)
-[OpenStack](#bar-60)
-
-As well as
-----------
-* Amazon RDS
-* Amazon RedShift
-* Amazon DynamoDB
-* Other AWS services
+Side dishes
+-----------
+* JSON
+* AJAX
+* HTTP 
+* JQuery
+* Underscore.js
+* LESS
+* SASS
+* GraphQL
+* Jade
+* JSDoc
+* Markdown
+* Grunt
+* Mocha
+* Jasmine
+* Wintersmith
+* Dust.js
+* Cross-browser
+* Async
+* RxJS
+* Backbone.js
 
 
 Data
@@ -134,16 +113,58 @@ More keywords
 * ORM
 * Serialization
 * JSON
+* GraphQL
 * Protobuf
 * XPath
 * DocBook
 * SQL Server
-* Oracle
+* MySQL
+* PostgreSQL
 * SQLite
 * Blazegraph
 * SPARQL
 * NoSQL
 
+
+Machine learning & NLP
+======================
+*2 years experience*
+
+[Tensorflow](#bar-70)
+[ML theory](#bar-60)
+[Stanford NLP tools](#bar-60)
+
+Plus
+----------
+* AMR
+* RDF
+* word2vec
+* MATHLAB
+
+
+Cloud
+=====
+*4 years experience*
+
+[Amazon EC2](#bar-80)
+[Amazon S3](#bar-80)
+[OpenStack](#bar-50)
+
+As well as
+----------
+* Amazon RDS
+* Amazon RedShift
+* Amazon DynamoDB
+* Other AWS services
+
+
+Mobile
+======
+*2 years experience*
+
+[Objective-C & iOS](#bar-40)
+[Java & Android](#bar-50)
+[Titanium Appcelerator](#bar-50)
 
 
 
@@ -151,13 +172,17 @@ Tools
 =============
 *my usual workplace*
 
-[Git](#bar-75)
-[IntelliJ Idea](#bar-85)
-[Eclipse](#bar-85)
-[Linux](#bar-85)
+
+[VS Code](#bar-95)
+[IntelliJ Idea](#bar-80)
+[Docker](#bar-85)
+[Git](#bar-80)
+[Linux](#bar-80)
+
 
 Less used tools
 ---------------
+* Eclipse
 * Jira
 * SublimeText
 * Visual Studio
@@ -169,10 +194,9 @@ Less used tools
 * xCode
 
 
-
 Communication
 ==============
-and collaboration
+*and collaboration*
 
 [Russian](#bar-95)
 [English](#bar-80)

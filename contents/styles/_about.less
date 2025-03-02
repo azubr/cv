@@ -8,25 +8,36 @@
 		padding: 70px 20px 20px 0px;
 		min-height: auto;
 	} 
-	@media only print {
+	@media @print {
 		padding-top: 10px;
+		grid-column: 1;
+		grid-row: 1 / span 2;
 	}
 
 	position: relative;
+	z-index: 1;
 	overflow: hidden;
 	.about-img {
-		width: @image-size;
 		height: 500px;
+		width: @image-size;
 		position: absolute;
 		left: 0;
-		@media @simple {
+		@media @mobile {
 			display: inline-block;
-			position: static;
-			height: @image-size;
+			position: relative;
+			margin-bottom: calc(@image-size - 500px + 10px);
 			line-height: @image-size;
 		}
-		@media only print {
-			display: none;
+		@media @print {
+			position:static;
+			float:left;
+			width: @image-size / 2;
+			height: auto;
+			margin-right: 20px;
+			margin-bottom: calc(@image-size / 2 - 500px / 2 + 10px);
+			flex-basis: @image-size / 2;
+			align-self: flex-start;
+			flex-grow: 0;
 		}
 	}
 	.about-bg {
@@ -38,14 +49,16 @@
 	}
 	.about-text {
 		text-align: left;
-
+		flex-basis: 0;
+		flex-grow: 1;
+		position: relative;
 	}
 
 	.buttons {
 		position: absolute;
 		top: 25px;
 		right: 0px;
-		@media only print {
+		@media @print {
 			display: none;
 		}
 	}
@@ -87,16 +100,17 @@
 		border-bottom: thin solid @theme-color;
 		padding-bottom: 4px;
 		margin-bottom: 0;
-		@media only print {
+		@media @print {
+			display: flex;
 			font-size: 0;
+			border-bottom-color: inherit;
 		}
 		strong {
 			color: @theme-color;
-			em {
-				font-style: normal;
-				@media only print {
-					font-size:18px;
-				}
+			font-style: normal;
+			@media @print {
+				color: inherit;
+				font-size:34px;
 			}
 		}
 
@@ -108,5 +122,56 @@
 		font-size: calc(~"10px + 1vw");
 		padding-top: 4px;
 		margin: 0;
+		@media @print {
+			font-size:18px;
+		}
+	}
+
+	p {
+		@media @print {
+			clear: both;
+		}
+	}
+
+	p:first-child { 
+		@keyframes appear {
+			0% {
+			  	opacity: 0%;
+				transform: scale(0.7) rotate(-10deg);
+			}
+			50% {
+				opacity: 100%;
+			}
+			100% {
+				transform: scale(1) rotate(10deg);
+			}
+		}
+		animation: 0.5s ease-out 0s 1 appear;
+		clear: both;
+		font-size: 20px;
+		line-height: 1.4em;
+		font-weight: 700;
+		padding: 0 0.5em;
+		position: absolute;
+		border: 2px solid @theme-color;
+		border-radius: 4px;
+		width: 7em;
+		transform: rotate(10deg);
+		margin-top:-75px;
+		color: @theme-color;
+		background-color: white;
+		margin-left: calc(65% - 35em);
+		@media @mobile {
+			margin-left: calc(50% - 20em);
+		}
+		@media @print {
+			animation: none;
+			transform: rotate(4deg);
+			position: fixed;
+			left: calc(85% - 20.8em);
+			top: 0.8em;
+			margin: 0;
+			width: 13em;
+		}
 	}
 }

@@ -4,6 +4,8 @@
 @content-padding-left: ~"4vw + 10px";
 @content-padding: ~"2vw + 35px";
 
+@mobile: ~"only screen and (max-width: 990px)";
+@print: ~"only print";
 @simple: ~"only screen and (max-width: 990px), only print";
 
 html, body {
@@ -22,8 +24,9 @@ body {
   background-color: @background;
   width: 100%;
   position: relative;
-  @media only print {
-	background-color: white;		
+  @media @print {
+	background-color: white;	
+	zoom:77%;
   }
 }
 
@@ -61,8 +64,15 @@ body {
 	 	
 	}
 
-	@media only print {
+	@media @print {
 		background: white;
+		overflow: hidden;
+		display: grid;
+		// note: manually set columns and merged rows for every section
+		// to avoid empty space between sections
+		grid-template-columns: auto 34%;
+		column-gap: 1.8em;
+		align-items: start;
 	}
 
 	&::after {
@@ -112,6 +122,9 @@ body {
 	.bar2 { background-color: @dark-gray; }
 	.bar0 { background-color: @bright-gray; }
 	.bar1 { background-color: @theme-color; }
+	@media @print {
+		display: none;
+	}
 }
 
 @import "_about.less";
@@ -127,7 +140,7 @@ body {
 		margin-top: 0;
 		color: @dark-gray;
 	}
-	@media only print {
+	@media @print {
 		display: none;
 	}
 }
@@ -147,8 +160,14 @@ body {
 	.text {
 		font-size: 22px;
 		font-weight: 200;
+		@media @mobile {
+			br {
+				display: none;
+			}
+			font-size: 16px;
+		}
 	}
-	@media only print {
+	@media @print {
 		display: none;
 	}
 } 
