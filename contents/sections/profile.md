@@ -26,7 +26,7 @@ Website
 
 LinkedIn
 =======
-[a-zubr](www.linkedin.com/in/a-zubr)
+[a-zubr](https://www.linkedin.com/in/a-zubr)
 ------------------------------------
 
 GitHub
