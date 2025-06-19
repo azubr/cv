@@ -9,6 +9,7 @@ Blockchain & DeFi **🔥**
 *5 years experience,* **current priority**
 
 [Solidity](#bar-95)
+[Web3](#bar-90)
 [TheGraph](#bar-90)
 [DeFi protocols](#bar-85)
 [Nodes maintenance](#bar-70)
@@ -19,6 +20,8 @@ And also
 * Cardano
 * L2 chains
 * EVM
+* web3.js
+* ethers.js
 * AssemblyScript
 * Firehose
 * Hardhat

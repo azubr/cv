@@ -3,9 +3,38 @@ title: Work Experience
 mask: experience
 ---
 
+NDA DeFI Project
+=====================================================================
+*June 2025 - Present*
+
+
+Senior backend blockchain developer
+----------------------------------------------------------
+- Smart Contract Development: Design, testing, deployment, and optimization of Solidity
+code in accordance with ERC/EIP standards, with a focus on gas efficiency.
+- Blockchain Analysis and Parsing: Extraction and processing of data from Ethereum-like
+networks; monitoring and analyzing transactions and events related to specific contracts.
+- Security common Assurance: vulnerabilities.
+ Code auditing, use of battle-tested libraries, and protection against
+- Integration and Interoperability: Development of dApps/MVPs integrated with smart
+contracts, connection to external services (oracles), and frontend/backend interaction via
+Ethers.js/Web3.js, including work with Layer 2 solutions.
+- Blockchain Operations: Support for multiple networks (Ethereum, BSC, Polygon, etc.) and
+integration with DeFi protocols.
+- Automation and Monitoring: Creation of deployment scripts (Hardhat, Foundry), CI/CD
+pipeline setup, and real-time contract monitoring in production environments.
+- API/Service/Module Development: Building backend components and services tailored to
+project needs.
+- ETL Pipeline Development in TypeScript: Connecting to configured JSON-RPC/WebSocket
+nodes, extracting on-chain data (transactions, balances, TVL, price), and transforming it
+into a unified, structured format for downstream consumption.
+- Documentation: Maintaining technical documentation and applying NatSpec annotations to
+describe code functionality.
+
+
 Trading bot (own project)
 =====================================================================
-*September 2024 - Present*
+*September 2024 - May 2025*
 
 ### Trading bot ###
 >	Tracks state of spefific tokens and protocols
@@ -33,7 +62,7 @@ Senior Backend developer, Architect, Blockchain Specialist
 Senior Backend developer, Architect, Blockchain Specialist
 ----------------------------------------------------------
 - Updating architecture of blockchain indexer involving TheGraph
-- Indexing of MakerDAO, Uniswap, Curve and others (Kotlin, AssemblyScript)
+- Indexing of MakerDAO, Uniswap, Curve and others (Kotlin, AssemblyScript, web3j)
 
 ### Smart wallet ###
 >   Smart contract holding user's funds and allowing to execute arbitrary inversment strategies on behalf of the user.
@@ -42,8 +71,8 @@ Senior Backend developer, Architect, Blockchain Specialist
 Senior Software Engineer, Architect, Blockchain Specialist
 ----------------------------------------------------------
 
-- Architecture and development of smart contracts (Solidity)
-- Integration of MakerDAO main frontend functionality (JS, React)
+- Architecture and development of smart contracts (Solidity, Hardhat, web3.js)
+- Integration of MakerDAO main frontend functionality (JS, React, web3.js)
 
 ### Datai network ###
 >   Decentralized network of blockchain indexers providing aggregation and deep insights of various DeFi protocols.
@@ -86,7 +115,7 @@ Senior Software Engineer, Architect (3 years)
 
 Senior Software Engineer, Architect, Blockchain Specialist (1 year)
 ---------------------------------------------------------------------
-* Architecture and full development of blockchain part of Liquifi V1 (Solidity)
+* Architecture and full development of blockchain part of Liquifi V1 (Solidity, Hardhat, web3.js)
 * Participation in protocol design and math
 * Development of Liquifi V2 on Cardano blockchain (Haskell)
 * Backend development of Liquifi V2 for Cardano (Haskell)

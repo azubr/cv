@@ -10,7 +10,6 @@ sections:
  - education
 ---
 
-*Looking for remote job*
 
 Hi, I'm **Alexey Zubritskiy**
 ==============================
